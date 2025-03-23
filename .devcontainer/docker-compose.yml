@@ -17,8 +17,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ..:/workspaces:cached
-    command: sleep infinity
-    environment:
-      DB_POSTGRESDB_HOST: postgres
-      DB_TYPE: postgresdb
-      DB_POSTGRESDB_PASSWORD: password
+command: n8n start
+environment:
+  - N8N_BASIC_AUTH_USER=your_username   # Thay 'your_username' bằng tên đăng nhập bạn muốn
+  - N8N_BASIC_AUTH_PASSWORD=your_password  # Thay 'your_password' bằng mật khẩu bạn muốn
+
